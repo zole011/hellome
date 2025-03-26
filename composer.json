@@ -2,7 +2,7 @@
   "name": "zole/hellome",
   "description": "this is a test extension",
   "type": "typo3-cms-extension",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": [
     "GPL-2.0-or-later"
   ],

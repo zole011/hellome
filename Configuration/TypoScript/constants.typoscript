@@ -1,0 +1,5 @@
+plugin.tx_hellome {
+    settings {
+        siteName = HelloMe Extension
+    }
+}

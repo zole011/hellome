@@ -1,20 +1,16 @@
 <?php
-defined('TYPO3_MODE') || die();
 
-call_user_func(function () {
-    // Register the plugin
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Zole.hellome',
-        'Hellome',
-        [
-            \Zole\Hellome\Controller\HelloWorldController::class => 'index'
-        ],
-        // non-cacheable actions
-        [
-            \Zole\Hellome\Controller\HelloWorldController::class => 'index'
-        ]
-    );
+defined('TYPO3') or die();
 
-    // Include TypoScript
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup('@import "EXT:hellome/Configuration/TypoScript/setup.typoscript"');
-});
+// Registracija plugina u TYPO3
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'hellome',  // Ključ ekstenzije mora biti u malim slovima
+    'Hello',
+    [
+        \Zole\Hellome\Controller\HelloWorldController::class => 'show'
+    ],
+    // Non-cacheable actions
+    [
+        \Zole\Hellome\Controller\HelloWorldController::class => 'show'
+    ]
+);
